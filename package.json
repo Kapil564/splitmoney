@@ -1,0 +1,22 @@
+{
+  "name": "splitmoney",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SplitMoney - Expense splitting app (Backend + Frontend)",
+  "scripts": {
+    "backend:install": "cd backend && npm install",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "frontend:install": "cd frontend && npm install",
+    "frontend:start": "cd frontend && npx expo start",
+    "frontend:android": "cd frontend && npx expo start --android",
+    "frontend:ios": "cd frontend && npx expo start --ios",
+    "frontend:web": "cd frontend && npx expo start --web",
+    "install:all": "npm run backend:install && npm run frontend:install",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:start\"",
+    "postinstall": "npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
